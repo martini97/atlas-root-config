@@ -1,22 +1,11 @@
 <single-spa-router>
-  <!--
-
-    This is the single-spa Layout Definition for your microfrontends.
-    See https://single-spa.js.org/docs/layout-definition/ for more information.
-
-  -->
-
-  <!-- Example layouts you might find helpful:
-
-  <nav>
-    <application name="@org/navbar"></application>
-  </nav>
-  <route path="settings">
-    <application name="@org/settings"></application>
-  </route>
-
-  -->
-
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <application name="@olympus/theseus"></application>
   <main>
     <route default>
       <application name="@single-spa/welcome"></application>
