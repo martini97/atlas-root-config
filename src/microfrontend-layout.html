@@ -7,6 +7,9 @@
   </style>
   <application name="@olympus/theseus"></application>
   <main>
+    <route path="/login">
+      <application name="@olympus/cerberus"></application>
+    </route>
     <route default>
       <application name="@single-spa/welcome"></application>
     </route>
