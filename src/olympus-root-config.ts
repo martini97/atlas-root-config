@@ -15,6 +15,14 @@ const applications = constructApplications({
 });
 const layoutEngine = constructLayoutEngine({ routes, applications });
 
+registerApplication({
+  name: "@olympus/vanilla",
+  app: () => System.import("@olympus/vanilla"),
+  activeWhen: function ({ search }: Location): boolean {
+    return (search || "").includes("show_clock");
+  },
+});
+
 applications.forEach(registerApplication);
 layoutEngine.activate();
 start();
